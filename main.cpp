@@ -8,9 +8,11 @@
       float* vectorCostos;
       float* vectorMateriaPrima;
       int requerimientos[5 * 4];
-      int numProductos = 5;
+     const int numProductos = 5;
+     const int numMateriasPrimas = 4;
       int numSemanas = 4;
-      int numMateriasPrimas = 4;
+     
+     
 //Aplicación de la fórmula del COGS
 
 int main() {   
@@ -32,7 +34,7 @@ for (int p = 0; p < numProductos; p++)
 {
    for (int m = 0; m < numSemanas; m++)
    {
-      requerimientos[p * numMateriasPrimas + m]
+      requerimientos[p * numMateriasPrimas + m];
       
    }
 }
@@ -94,12 +96,50 @@ for (int p = 0; p < numProductos; p++)
      }
 
      case 3:{
-        std::cout << "La opcion 2";
+
+      
+        
         break;
      }
 
      case 4:{
-        std::cout << "La opcion 2";
+      int semanaSeleccionada;
+      std::cout << "Ingrese Semana para el cálculo de costos: ";
+
+      while (true) //Validar semana seleccionada
+      {
+        std::cin >> semanaSeleccionada;
+      if (semanaSeleccionada > numSemanas || semanaSeleccionada <= 0)
+      {
+         std::cout << "ERROR: No existe esa semana\n";
+      }else{
+         break;
+      }
+      }
+      
+       float consumoMP[numMateriasPrimas] = {0};
+      float consumo = 0.0f;
+      
+      //=== Calcular consumo de materia prima por semana ===
+        for (int materia = 0; materia < numMateriasPrimas; materia++)
+        {
+         for (int product = 0; product < numProductos; product++)
+         {
+          consumo = consumo + matrizPlanificacion[product][semanaSeleccionada] * requerimientos[product * numMateriasPrimas + materia];
+
+         }
+         consumoMP[materia] = consumo; //Asignar el consumo total de ese material durante esa semana
+        }
+        //=== Calcular COGS ===
+        float cogsTotal = 0.0f;
+
+        for (int producto = 0; producto < numProductos; producto++)
+        {
+         cogsTotal = cogsTotal + matrizPlanificacion[producto][semanaSeleccionada] * vectorCostos[producto];
+        }
+        // === Calcular el inventario final ===
+        float valorInventarioFinal = 0.0;
+
         break;
      }
 

@@ -55,11 +55,11 @@ while (seguirCorriendoPrograma == true)
         std::cout << "Semana " << s << "\t";
     }
     std::cout << std::endl;
-    std::cout << "----------\n";
+    std::cout << "-----------------------------------------------------------------------------\n";
 
     for (int p = 0; p < numProductos; p++) {
       
-        std::cout << "Prod. " << p << "\t\t";
+        std::cout << "Product " << p << "\t\t";
 
         for (int s = 0; s < numSemanas; s++) {
             std::cout << matrizPlanificacion[p][s] << "\t\t";
@@ -200,6 +200,7 @@ for (int i = 0; i < numProductos; i++) {
 
     delete[] vectorCostos;
     delete[] vectorMateriaPrima;
+    break;
      }
 
      default:

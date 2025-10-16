@@ -1,3 +1,5 @@
+![alt text](https://i.pinimg.com/564x/1a/73/db/1a73dbbcee710eed2751d4acbaeed077.jpg)
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/eW2MawP6)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=21059248)
 # Actividad Práctica: Sistema de Planificación de Producción y Costos (Modelo COGS)

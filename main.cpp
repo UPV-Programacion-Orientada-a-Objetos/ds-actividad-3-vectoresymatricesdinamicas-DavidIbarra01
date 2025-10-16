@@ -48,10 +48,29 @@ while (seguirCorriendoPrograma == true)
      switch (selectoption)
      {
      case 1:{
-      std::cout << "\n";
-        std::cout << "FUnciono :)";
-        break;
-     }
+    std::cout << "\n--- Plan de Producción Actual ---\n\n";
+
+    std::cout << "Producto\t";
+    for (int s = 0; s < numSemanas; s++) {
+        std::cout << "Semana " << s << "\t";
+    }
+    std::cout << std::endl;
+    std::cout << "----------\n";
+
+    for (int p = 0; p < numProductos; p++) {
+      
+        std::cout << "Prod. " << p << "\t\t";
+
+        for (int s = 0; s < numSemanas; s++) {
+            std::cout << matrizPlanificacion[p][s] << "\t\t";
+        }
+
+        std::cout << std::endl;
+    }
+    std::cout << "\n";
+    break;
+}
+
 
      case 2:{ //Agregar nueva semana
       int originalNumeroSemanas = numSemanas;
